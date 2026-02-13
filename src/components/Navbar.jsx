@@ -3,13 +3,17 @@ export default function Navbar(){
     return(
         <div>
             <nav>
-                <NavLink to="/" style={({ isActive }) => ({
-    color: isActive ? "red" : "black"
-  })} >Home</NavLink>{"|"}
-                  <NavLink to="/products" style={({ isActive }) => ({
-    color: isActive ? "red" : "black"
-  })} >Products</NavLink>{"|"}
-            </nav>
+  <NavLink to="/" className="logo">
+    Cozy Plush 🧸
+  </NavLink>
+
+  <div className="nav-links">
+    <NavLink to="/">Home</NavLink>
+    <NavLink to="/products">Products</NavLink>
+    <NavLink to="/about">About</NavLink>
+  </div>
+</nav>
+
         </div>
     )
 }

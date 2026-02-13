@@ -5,7 +5,8 @@ import Products from "./pages/Products"
 import ProductsList from "./pages/ProductsList"
 import ProductsDetails from "./pages/ProductsDetails"
 import NotFound from "./pages/NotFound"
-
+import About from "./pages/about"
+import "./App.css";
 export default function App(){
   return(
     <div>
@@ -18,8 +19,11 @@ export default function App(){
           <Route path=":id" element={<ProductsDetails />} />
 
         </Route>
-
+        <Route path="/about" element={<About />} />
+<Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
+        
+
       </Routes>
     </div>
   )

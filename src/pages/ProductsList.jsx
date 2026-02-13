@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 
 export default function ProductsList() {
   return (
-    <div>
-      {products.map(product => (
-        <div key={product.id}>
-          <h2>{product.name}</h2>
-          <p>${product.price}</p>
+    <div className="products-grid">
+      {products.map((product) => (
+        <div className="product-card" key={product.id}>
+          <img src={product.image} alt={product.name} />
+          <h3>{product.name}</h3>
+          <p className="price">${product.price}</p>
           <p>{product.category}</p>
-          <Link to={`/products/${product.id}`}>View Details</Link>
+          <Link className="button-link" to={`/products/${product.id}`}>
+            View Details
+          </Link>
         </div>
       ))}
     </div>
